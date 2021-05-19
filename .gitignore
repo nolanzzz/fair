@@ -3,3 +3,5 @@
 .DS_Store
 demos/**
 models/**
+**/__pycache__
+**/__pycache__/**
