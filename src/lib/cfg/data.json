@@ -1,5 +1,5 @@
 {
-    "root":"/data/yfzhang/MOT/JDE",
+    "root":"/u40/zhanr110/fair-tracker/data/yfzhang/MOT/JDE",
     "train":
     {
         "mot17":"./data/mot17.train",
