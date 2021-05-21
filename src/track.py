@@ -117,7 +117,7 @@ def eval_seq(opt, dataloader, data_type, result_filename, save_dir=None, show_im
     return frame_id, timer.average_time, timer.calls
 
 
-def main(opt, data_root='/u40/zhanr110/fair-tracker/data/yfzhang/JDE/MOT17/images/test', det_root=None, seqs=('MOT16-05',), exp_name='demo',
+def main(opt, data_root='/data/MOT16/train', det_root=None, seqs=('MOT16-05',), exp_name='demo',
          save_images=False, save_videos=False, show_image=True):
     logger.setLevel(logging.INFO)
     result_root = os.path.join(data_root, '..', 'results', exp_name)
