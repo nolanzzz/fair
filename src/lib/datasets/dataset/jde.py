@@ -11,6 +11,7 @@ import json
 import numpy as np
 import torch
 import copy
+import logging
 
 from torch.utils.data import Dataset
 from torchvision.transforms import transforms as T
@@ -28,7 +29,7 @@ class LoadImages:  # for inference
             self.files = list(filter(lambda x: os.path.splitext(x)[1].lower() in image_format, self.files))
         elif os.path.isfile(path):
             self.files = [path]
-
+        logging.warning(path)
         self.nF = len(self.files)  # number of image files
         self.width = img_size[0]
         self.height = img_size[1]
