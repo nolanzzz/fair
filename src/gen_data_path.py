@@ -69,5 +69,5 @@ def gen_data_path_mot17_emb(root_path):
 
 
 if __name__ == '__main__':
-    root = '/data/yfzhang/MOT/JDE'
+    root = '/data/MOT/JDE'
     gen_data_path_mot17_emb(root)

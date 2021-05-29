@@ -160,11 +160,11 @@ if __name__ == '__main__':
         seqs_str = '''1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19'''
         #seqs_str = '''9'''
         #seqs_str = '''11 12 13 14 15 16 17 18 19'''
-        data_root = '/data/yfzhang/MOT/JDE/HIE/HIE20/images/train'
+        data_root = '/data/MOT/JDE/HIE/HIE20/images/train'
     elif opt.test_hie:
         seqs_str = '''20 21 22 23 24 25 26 27 28 29 30 31 32'''
         seqs_str = '''25'''
-        data_root = '/data/yfzhang/MOT/JDE/HIE/HIE20/images/test'
+        data_root = '/data/MOT/JDE/HIE/HIE20/images/test'
     elif opt.val_mot17:
         seqs_str = '''MOT17-02-SDP
                       MOT17-04-SDP
