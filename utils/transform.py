@@ -8,7 +8,7 @@ filename = path + '/' + sys.argv[2]
 
 tid_curr = 0
 tid_last = -1
-gt = np.loadtxt('coords_fib_cam_0.txt', dtype=np.float64, delimiter=',')
+gt = np.loadtxt(filename, dtype=np.float64, delimiter=',')
 label_fpath = path + '/gt.txt'
 for fid, tid, x1, y1, x2, y2 in gt:
     fid = int(fid)
