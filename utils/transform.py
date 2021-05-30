@@ -3,8 +3,10 @@ import os
 import sys
 import numpy as np
 
-path = sys.argv[1]
-filename = path + '/' + sys.argv[2]
+data_type = sys.argv[1]
+folder_no = sys.argv[2]
+path = '~/fair-tracker/data/MTA/mta_data/images/' + data_type + '/cam_' + folder_no + '/gt'
+filename = path + '/coords_fib_cam_' + folder_no + '.txt'
 
 tid_curr = 0
 tid_last = -1
