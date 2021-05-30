@@ -1,5 +1,6 @@
 import os.path as osp
 import os
+import sys
 import numpy as np
 
 
@@ -8,8 +9,10 @@ def mkdirs(d):
         os.makedirs(d)
 
 
-seq_root = '../data/MTA/mta_data/images/train'
-label_root = '../data/MTA/mta_data/labels_with_ids/train'
+# train or test
+data_type = sys.argv[1]
+seq_root = '../data/MTA/mta_data/images/' + data_type
+label_root = '../data/MTA/mta_data/labels_with_ids/' + data_type
 mkdirs(label_root)
 seqs = [s for s in os.listdir(seq_root)]
 
