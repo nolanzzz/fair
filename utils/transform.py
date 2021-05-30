@@ -10,11 +10,7 @@ tid_curr = 0
 tid_last = -1
 gt = np.loadtxt(filename, dtype=np.float64, delimiter=',')
 label_fpath = path + '/gt.txt'
-i = 0
 for fid, tid, x1, y1, x2, y2 in gt:
-    if i == 0:
-        i += 1
-        continue
     fid = int(fid)
     tid = int(tid)
     x1 = int(x1)
