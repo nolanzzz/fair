@@ -1,0 +1,15 @@
+{
+    "root":"/u40/zhanr110/fair-tracker/data/MTA/mta_data",
+    "train":
+    {
+        "mta":"./data/mta.train"
+    },
+    "test_emb":
+    {
+        "mta":"./data/mta.train"
+    },
+    "test":
+    {
+        "mta":"./data/mta.train"
+    }
+}
