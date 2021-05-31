@@ -73,17 +73,18 @@ def gen_data_path_mta_train(root_path):
     real_path = os.path.join(root_path, mta_path)
     write_file = os.path.join(root_path, 'src/data/mta.train')
     seq_names = [s for s in sorted(os.listdir(real_path))]
-    # with open(write_file, 'w') as f:
-    #     for seq_name in seq_names:
-    #         seq_path = os.path.join(real_path, seq_name)
-    #         seq_path = os.path.join(seq_path, 'img1')
+    with open(write_file, 'w') as f:
+        for seq_name in seq_names:
+            seq_path = os.path.join(real_path, seq_name)
+            seq_path = os.path.join(seq_path, 'img1')
+            print(seq_path)
     #         images = sorted(glob.glob(seq_path + '/*.jpg'))
     #         len_all = len(images)
     #         # len_half = int(len_all / 2)
     #         for i in range(len_all):
     #             image = images[i]
     #             print(image[22:], file=f)
-    # f.close()
+    f.close()
 
 
 if __name__ == '__main__':
