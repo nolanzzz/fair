@@ -82,9 +82,7 @@ def gen_data_path_mta_train(root_path):
             # len_half = int(len_all / 2)
             for i in range(5):
                 image = images[i]
-                # print(image[22:], file=f)
-                print(image)
-                print(image[29:])
+                print(image[29:], file=f)
     f.close()
 
 
