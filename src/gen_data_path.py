@@ -80,7 +80,7 @@ def gen_data_path_mta_train(root_path):
             images = sorted(glob.glob(seq_path + '/*.jpg'))
             len_all = len(images)
             # len_half = int(len_all / 2)
-            for i in range(5):
+            for i in range(len_all):
                 image = images[i]
                 print(image[29:], file=f)
     f.close()
