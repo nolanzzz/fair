@@ -89,5 +89,5 @@ def gen_data_path_mta_train(root_path):
 
 
 if __name__ == '__main__':
-    root = '/u40/zhanr110/fair-tracker'
+    root = '/u40/zhanr110/MTMCT'
     gen_data_path_mta_train(root)
