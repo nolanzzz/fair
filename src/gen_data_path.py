@@ -69,7 +69,8 @@ def gen_data_path_mot17_emb(root_path):
 
 
 def gen_data_path_mta_train(root_path):
-    mta_path = 'data/MTA/mta_data/images/train'
+    # mta_path = 'data/MTA/mta_data/images/train'
+    mta_path = 'data/MTA/mta_data/labels_with_ids/train'
     real_path = os.path.join(root_path, mta_path)
     write_file = os.path.join(root_path, 'src/data/mta.train')
     seq_names = [s for s in sorted(os.listdir(real_path))]
