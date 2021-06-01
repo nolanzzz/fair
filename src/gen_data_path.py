@@ -78,11 +78,12 @@ def gen_data_path_mta_train(root_path):
         for seq_name in seq_names:
             seq_path = os.path.join(real_path, seq_name)
             seq_path = os.path.join(seq_path, 'img1')
-            images = sorted(glob.glob(seq_path + '/*.jpg'))
+            # images = sorted(glob.glob(seq_path + '/*.jpg'))
+            images = sorted(glob.glob(seq_path + '/*.txt'))
             len_all = len(images)
             # len_half = int(len_all / 2)
             for i in range(len_all):
-                image = images[i]
+                image = (images[i])[:-3] + 'jpg'
                 print(image[29:], file=f)
     f.close()
 
