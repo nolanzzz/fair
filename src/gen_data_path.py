@@ -94,7 +94,7 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
                     print("step " + str(curr_step), file=f)
                     curr_step += 1
                     period_i = 0
-                    i += step_length
+                    i = i + step_length
                     print("i " + str(i), file=f)
                     print("step_length " + str(step_length), file=f)
                     continue
