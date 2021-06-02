@@ -78,6 +78,8 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
     period_frames, step_length = data_portion(total_frames, num_steps, expected_frames)
     seq_names = [s for s in sorted(os.listdir(real_path))]
     with open(write_file, 'w') as f:
+        print("period_frames", period_frames, file=f)
+        print("step_length", step_length, file=f)
         for seq_name in seq_names:
             seq_path = os.path.join(real_path, seq_name)
             seq_path = os.path.join(seq_path, 'img1')
@@ -109,8 +111,6 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
 def data_portion(total_frames, num_portions, expected_frames):
     period_frames = expected_frames / num_portions
     step_length = total_frames / num_portions
-    print("period_frames", period_frames)
-    print("step_length", step_length)
     return period_frames, step_length
 
 
