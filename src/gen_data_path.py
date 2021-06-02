@@ -97,6 +97,7 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
                     i = i + step_length
                     continue
                 # not enough frames yet:
+                i += 1
                 period_i += 1
                 image = ((images[i])[:-3] + 'jpg').replace(label_path, data_path)
                 print(image[29:], file=f)
