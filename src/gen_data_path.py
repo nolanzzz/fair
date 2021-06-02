@@ -91,7 +91,7 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
                     break
                 # enough frames for current step
                 if period_i > period_frames:
-                    print("step", curr_step)
+                    print("step", curr_step, file=f)
                     curr_step += 1
                     period_i = 0
                     i += step_length
