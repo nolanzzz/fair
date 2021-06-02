@@ -84,8 +84,9 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
             images = sorted(glob.glob(seq_path + '/*.txt'))
             len_all = len(images)
             # len_half = int(len_all / 2)
-            period_i, curr_step = 0, 0
-            for i in range(len_all):
+            i, period_i, curr_step = 0, 0, 0
+            # for i in range(len_all):
+            while i < len_all:
                 # pass the last step, return here
                 if curr_step == num_steps:
                     break
