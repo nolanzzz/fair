@@ -95,6 +95,7 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
                     curr_step += 1
                     period_i = 0
                     i += step_length
+                    print("i " + str(i), file=f)
                     continue
                 # not enough frames yet:
                 period_i += 1
