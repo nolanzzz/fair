@@ -91,15 +91,15 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
                     break
                 # enough frames for current step
                 if period_i > period_frames:
-                    print("step", curr_step, file=f)
+                    print("step " + str(curr_step), file=f)
                     curr_step += 1
                     period_i = 0
                     i += step_length
                     continue
                 # not enough frames yet:
+                period_i += 1
                 image = ((images[i])[:-3] + 'jpg').replace(label_path, data_path)
                 print(image[29:], file=f)
-                period_i += 1
     f.close()
 
 
