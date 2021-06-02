@@ -111,7 +111,7 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
 def data_portion(total_frames, num_portions, expected_frames):
     period_frames = expected_frames / num_portions
     step_length = total_frames / num_portions
-    return period_frames, step_length
+    return int(period_frames), int(step_length)
 
 
 if __name__ == '__main__':
