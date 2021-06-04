@@ -5,13 +5,13 @@ import numpy as np
 
 data_type = sys.argv[1]
 folder_no = sys.argv[2]
-path = '/u40/zhanr110/MTMCT/data/MTA/mta_data/images/' + data_type + '/cam_' + folder_no + '/gt'
+path = '/u40/zhanr110/MTMCT/data/MTA/mta_data/images/' + data_type + '/cam_' + folder_no
 filename = path + '/coords_fib_cam_' + folder_no + '.txt'
 
 tid_curr = 0
 tid_last = -1
 gt = np.loadtxt(filename, dtype=np.float64, delimiter=',')
-gt_fpath = path + '/unsorted.txt'
+gt_fpath = path + '/gt/unsorted.txt'
 for fid, tid, x1, y1, x2, y2 in gt:
     fid = int(fid)
     tid = int(tid)
