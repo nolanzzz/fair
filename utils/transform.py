@@ -11,7 +11,7 @@ filename = path + '/coords_fib_cam_' + folder_no + '.txt'
 tid_curr = 0
 tid_last = -1
 gt = np.loadtxt(filename, dtype=np.float64, delimiter=',')
-label_fpath = path + '/gt.txt'
+gt_fpath = path + '/unsorted.txt'
 for fid, tid, x1, y1, x2, y2 in gt:
     fid = int(fid)
     tid = int(tid)
@@ -22,7 +22,7 @@ for fid, tid, x1, y1, x2, y2 in gt:
     width = int(x2 - x1)
     height = int(y2 - y1)
     rest = 1
-    label_str = '{:d},{:d},{:d},{:d},{:d},{:d},{:d},{:d},{:d}\n'.format(
+    gt_str = '{:d},{:d},{:d},{:d},{:d},{:d},{:d},{:d},{:d}\n'.format(
         fid, tid, x1, y1, width, height, rest, rest, rest)
-    with open(label_fpath, 'a') as f:
-        f.write(label_str)
+    with open(gt_fpath, 'a') as f:
+        f.write(gt_str)
