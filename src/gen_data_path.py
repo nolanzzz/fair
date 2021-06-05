@@ -133,10 +133,7 @@ if __name__ == '__main__':
     root = '/u40/zhanr110/MTMCT'
     # train or test
     data_type = sys.argv[1]
-    print(len(sys.argv))
-    print(sys.argv[0])
-    print(sys.argv[1])
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 2:
         portions = sys.argv[2]
         frames = sys.argv[3]
         gen_data_path_mta_partial(root, data_type, int(portions), int(frames))
