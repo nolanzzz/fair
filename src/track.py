@@ -174,16 +174,7 @@ if __name__ == '__main__':
     opt = opts().init()
     print(opt)
 
-    if not opt.val_mot16:
-        seqs_str = '''KITTI-13
-                      KITTI-17
-                      ADL-Rundle-6
-                      PETS09-S2L1
-                      TUD-Campus
-                      TUD-Stadtmitte'''
-        #seqs_str = '''TUD-Campus'''
-        data_root = os.path.join(opt.data_dir, 'MOT15/images/train')
-    else:
+    if opt.val_mot16:
         seqs_str = '''MOT16-02
                       MOT16-04
                       MOT16-05
@@ -216,6 +207,14 @@ if __name__ == '__main__':
                       TUD-Crossing
                       Venice-1'''
         data_root = os.path.join(opt.data_dir, 'MOT15/images/test')
+    if opt.test_mta:
+        seqs_str = '''cam_0
+                      cam_1
+                      cam_2
+                      cam_3
+                      cam_4
+                      cam_5'''
+        data_root = os.path.join(opt.data_dir, 'mta_data/images/test')
     if opt.test_mot17:
         seqs_str = '''MOT17-01-SDP
                       MOT17-03-SDP
