@@ -75,7 +75,7 @@ def gen_data_path_mta(root_path, gen_type, num_steps, expected_frames):
     real_path = os.path.join(root_path, label_path)
     write_file = os.path.join(root_path, 'src/data/mta.' + gen_type)
     total_frames = 124230 if gen_type == 'train' else 127880
-    period_frames, step_length = data_portion(total_frames, num_steps, expected_frames)
+    period_frames, step_length = data_portion(total_frames, num_steps, expected_frames) if num_steps > 0 else total_frames, 0
     seq_names = [s for s in sorted(os.listdir(real_path))]
     with open(write_file, 'w') as f:
         for seq_name in seq_names:
