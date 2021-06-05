@@ -18,4 +18,4 @@ for i in range(6):
         j += 1
         period_i += 1
         img_title = str(j).zfill(6) + '.jpg'
-        shutil.copy2('../data/MTA/mta_data/images/test/cam_' + str(i) + '/img1/' + img_title, '../data/MTA/mta_data/images/test/cam_' + str(i) + '_t')
+        shutil.copy2('../data/MTA/mta_data/images/test/cam_' + str(i) + '/img1/' + img_title, '../data/MTA/mta_data/images/test/cam_' + str(i) + '_t/' + img_title)
