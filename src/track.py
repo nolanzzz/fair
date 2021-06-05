@@ -277,4 +277,4 @@ if __name__ == '__main__':
          exp_name=opt.exp_id,
          show_image=False,
          save_images=False,
-         save_videos=False)
+         save_videos=True)
