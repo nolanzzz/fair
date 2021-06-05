@@ -134,6 +134,8 @@ if __name__ == '__main__':
     # train or test
     data_type = sys.argv[1]
     print(len(sys.argv))
+    print(sys.argv[0])
+    print(sys.argv[1])
     if len(sys.argv) > 1:
         portions = sys.argv[2]
         frames = sys.argv[3]
