@@ -6,7 +6,7 @@ for i in range(6):
         if curr_step == 5:
             break
         # enough frames for current step
-        if period_i > 10:
+        if period_i > 1000:
             curr_step += 1
             period_i = 0
             j = j + 25000
