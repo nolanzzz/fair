@@ -216,12 +216,13 @@ if __name__ == '__main__':
                       cam_5'''
         data_root = os.path.join(opt.data_dir, 'mta_data/images/test')
     if opt.test_mta_partial:
-        seqs_str = '''cam_0_p
-                      cam_1_p
-                      cam_2_p
-                      cam_3_p
-                      cam_4_p
-                      cam_5_p'''
+        # seqs_str = '''cam_0_p
+        #               cam_1_p
+        #               cam_2_p
+        #               cam_3_p
+        #               cam_4_p
+        #               cam_5_p'''
+        seqs_str = '''cam_0_t'''
         data_root = os.path.join(opt.data_dir, 'mta_data/images/test')
     if opt.test_mot17:
         seqs_str = '''MOT17-01-SDP
