@@ -1,11 +1,10 @@
 import shutil
 import sys
 
-use_steps = sys.argv[1]
+use_steps = bool(sys.argv[1])
 frames = int(sys.argv[2])
-print(use_steps)
 for i in range(6):
-    if use_steps == True:
+    if use_steps is True:
         j, period_i, curr_step = 1, 0, 0
         while j <= 127880:
             if curr_step == 5:
