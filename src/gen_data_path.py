@@ -69,12 +69,12 @@ def gen_data_path_mot17_emb(root_path):
     f.close()
 
 
-def gen_data_path_mta_train(root_path, num_steps, expected_frames):
-    data_path = 'data/MTA/mta_data/images/train'
-    label_path = 'data/MTA/mta_data/labels_with_ids/train'
+def gen_data_path_mta(root_path, gen_type, num_steps, expected_frames):
+    data_path = 'data/MTA/mta_data/images/' + gen_type
+    label_path = 'data/MTA/mta_data/labels_with_ids/' + gen_type
     real_path = os.path.join(root_path, label_path)
-    write_file = os.path.join(root_path, 'src/data/mta.train')
-    total_frames = 124230
+    write_file = os.path.join(root_path, 'src/data/mta.' + gen_type)
+    total_frames = 124230 if gen_type == 'train' else 127880
     period_frames, step_length = data_portion(total_frames, num_steps, expected_frames)
     seq_names = [s for s in sorted(os.listdir(real_path))]
     with open(write_file, 'w') as f:
@@ -104,25 +104,6 @@ def gen_data_path_mta_train(root_path, num_steps, expected_frames):
     f.close()
 
 
-def gen_data_path_mta_test(root_path):
-    data_path = 'data/MTA/mta_data/images/test'
-    label_path = 'data/MTA/mta_data/labels_with_ids/test'
-    real_path = os.path.join(root_path, label_path)
-    write_file = os.path.join(root_path, 'src/data/mta.test')
-    seq_names = [s for s in sorted(os.listdir(real_path))]
-    with open(write_file, 'w') as f:
-        for seq_name in seq_names:
-            seq_path = os.path.join(real_path, seq_name)
-            seq_path = os.path.join(seq_path, 'img1')
-            images = sorted(glob.glob(seq_path + '/*.txt'))
-            len_all = len(images)
-            # len_half = int(len_all / 2)
-            for i in range(len_all):
-                image = ((images[i])[:-3] + 'jpg').replace(label_path, data_path)
-                print(image[29:], file=f)
-    f.close()
-
-
 def data_portion(total_frames, num_portions, expected_frames):
     period_frames = expected_frames // num_portions
     step_length = total_frames // num_portions
@@ -133,9 +114,6 @@ if __name__ == '__main__':
     root = '/u40/zhanr110/MTMCT'
     # train or test
     data_type = sys.argv[1]
-    if data_type == 'train':
-        portions = sys.argv[2]
-        frames = sys.argv[3]
-        gen_data_path_mta_train(root, int(portions), int(frames))
-    else:
-        gen_data_path_mta_test(root)
+    portions = sys.argv[2]
+    frames = sys.argv[3]
+    gen_data_path_mta(root, data_type, int(portions), int(frames))
