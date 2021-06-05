@@ -107,6 +107,7 @@ class opts(object):
     self.parser.add_argument('--val_mot17', default=False, help='val mot17')
     self.parser.add_argument('--val_mot20', default=False, help='val mot20')
     self.parser.add_argument('--test_mot20', default=False, help='test mot20')
+    self.parser.add_argument('--test_mta', default=False, help='test mta')
     self.parser.add_argument('--val_hie', default=False, help='val hie')
     self.parser.add_argument('--test_hie', default=False, help='test hie')
     self.parser.add_argument('--conf_thres', type=float, default=0.4, help='confidence thresh for tracking')
