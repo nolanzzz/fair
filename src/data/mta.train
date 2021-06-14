@@ -1,4 +1,3 @@
-mta_data/images/train/cam_0/img1/000000.jpg
 mta_data/images/train/cam_0/img1/000001.jpg
 mta_data/images/train/cam_0/img1/000002.jpg
 mta_data/images/train/cam_0/img1/000003.jpg
@@ -4919,7 +4918,7 @@ mta_data/images/train/cam_0/img1/004917.jpg
 mta_data/images/train/cam_0/img1/004918.jpg
 mta_data/images/train/cam_0/img1/004919.jpg
 mta_data/images/train/cam_0/img1/004920.jpg
-mta_data/images/train/cam_1/img1/000000.jpg
+mta_data/images/train/cam_0/img1/004921.jpg
 mta_data/images/train/cam_1/img1/000001.jpg
 mta_data/images/train/cam_1/img1/000002.jpg
 mta_data/images/train/cam_1/img1/000003.jpg
@@ -9840,7 +9839,7 @@ mta_data/images/train/cam_1/img1/004917.jpg
 mta_data/images/train/cam_1/img1/004918.jpg
 mta_data/images/train/cam_1/img1/004919.jpg
 mta_data/images/train/cam_1/img1/004920.jpg
-mta_data/images/train/cam_2/img1/000000.jpg
+mta_data/images/train/cam_1/img1/004921.jpg
 mta_data/images/train/cam_2/img1/000001.jpg
 mta_data/images/train/cam_2/img1/000002.jpg
 mta_data/images/train/cam_2/img1/000003.jpg
@@ -14761,7 +14760,7 @@ mta_data/images/train/cam_2/img1/004917.jpg
 mta_data/images/train/cam_2/img1/004918.jpg
 mta_data/images/train/cam_2/img1/004919.jpg
 mta_data/images/train/cam_2/img1/004920.jpg
-mta_data/images/train/cam_3/img1/000000.jpg
+mta_data/images/train/cam_2/img1/004921.jpg
 mta_data/images/train/cam_3/img1/000001.jpg
 mta_data/images/train/cam_3/img1/000002.jpg
 mta_data/images/train/cam_3/img1/000003.jpg
@@ -19682,7 +19681,7 @@ mta_data/images/train/cam_3/img1/004917.jpg
 mta_data/images/train/cam_3/img1/004918.jpg
 mta_data/images/train/cam_3/img1/004919.jpg
 mta_data/images/train/cam_3/img1/004920.jpg
-mta_data/images/train/cam_4/img1/000000.jpg
+mta_data/images/train/cam_3/img1/004921.jpg
 mta_data/images/train/cam_4/img1/000001.jpg
 mta_data/images/train/cam_4/img1/000002.jpg
 mta_data/images/train/cam_4/img1/000003.jpg
@@ -24603,7 +24602,7 @@ mta_data/images/train/cam_4/img1/004917.jpg
 mta_data/images/train/cam_4/img1/004918.jpg
 mta_data/images/train/cam_4/img1/004919.jpg
 mta_data/images/train/cam_4/img1/004920.jpg
-mta_data/images/train/cam_5/img1/000000.jpg
+mta_data/images/train/cam_4/img1/004921.jpg
 mta_data/images/train/cam_5/img1/000001.jpg
 mta_data/images/train/cam_5/img1/000002.jpg
 mta_data/images/train/cam_5/img1/000003.jpg
@@ -29524,3 +29523,4 @@ mta_data/images/train/cam_5/img1/004917.jpg
 mta_data/images/train/cam_5/img1/004918.jpg
 mta_data/images/train/cam_5/img1/004919.jpg
 mta_data/images/train/cam_5/img1/004920.jpg
+mta_data/images/train/cam_5/img1/004921.jpg
