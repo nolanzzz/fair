@@ -70,7 +70,7 @@ def write_results_score(filename, results, data_type):
 def eval_seq(opt, dataloader, data_type, result_filename, save_dir=None, show_image=True, frame_rate=30, use_cuda=True):
     if save_dir:
         mkdir_if_missing(save_dir)
-    tracker = JDETracker(opt, frame_rate=frame_rate)
+    tracker = JDETracker(opt, frame_rate=frame_rate, use_cuda=use_cuda)
     timer = Timer()
     results = []
     frame_id = 0
@@ -136,8 +136,9 @@ def main(opt, data_root='/data/MOT16/train', det_root=None, seqs=('MOT16-05',), 
         result_filename = os.path.join(result_root, '{}.txt'.format(seq))
         meta_info = open(os.path.join(data_root, seq, 'seqinfo.ini')).read()
         frame_rate = int(meta_info[meta_info.find('frameRate') + 10:meta_info.find('\nseqLength')])
+        # set use_cuda to False if run with cpu
         nf, ta, tc = eval_seq(opt, dataloader, data_type, result_filename,
-                              save_dir=output_dir, show_image=show_image, frame_rate=frame_rate)
+                              save_dir=output_dir, show_image=show_image, frame_rate=frame_rate, use_cuda=False)
         n_frame += nf
         timer_avgs.append(ta)
         timer_calls.append(tc)
