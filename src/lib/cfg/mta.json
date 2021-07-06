@@ -1,5 +1,5 @@
 {
-    "root":"/u40/zhanr110/MTMCT/data/MTA",
+    "root":"/u40/zhanr110/fair/data/MTA",
     "train":
     {
         "mta":"./data/mta.train"
