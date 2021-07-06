@@ -263,6 +263,10 @@ class JDETracker(object):
         remain_inds = dets[:, 4] > self.opt.conf_thres
         dets = dets[remain_inds]
         id_feature = id_feature[remain_inds]
+        print("dets shape: ", dets.shape)
+        print("dets: ", dets)
+        print("id_feature shape: ", id_feature.shape)
+        print("id_feature: ", id_feature)
 
         # vis
         '''
